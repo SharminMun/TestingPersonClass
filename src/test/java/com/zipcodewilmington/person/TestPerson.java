@@ -14,7 +14,7 @@ public class TestPerson {
         Integer expectedAge = Integer.MAX_VALUE;
 
         // When
-        Person person = new Person();
+        Person person = new Person(expectedName, expectedAge);
 
         // Then
         String actualName = person.getName();
@@ -95,4 +95,28 @@ public class TestPerson {
         Integer actual = person.getAge();
         Assert.assertEquals(expected, actual);
     }
+
+   @Test
+   public void testNewTest() {
+    // information given
+    String expectedName = "Tania";
+    Integer expectedAge = 22;
+    String expectedLastName = "Khan";
+    String expectedPlaceOfBirth = "New York";
+    String expectedBirthMonth = "November";
+    String expectedNationality = "American";
+
+    //When
+    Person person = new Person(expectedName, expectedAge, expectedLastName, expectedPlaceOfBirth, expectedBirthMonth, expectedNationality);
+
+    //Then
+       Assert.assertEquals(person.getName(), expectedName);
+       Assert.assertEquals(person.getAge(), expectedAge);
+       Assert.assertEquals(person.getLastName(), expectedLastName);
+       Assert.assertEquals(person.getPlaceOfBirth(), expectedPlaceOfBirth);
+       Assert.assertEquals(person.getBirthMonth(), expectedBirthMonth);
+       Assert.assertEquals(person.getNationality(), expectedNationality);
+
+   }
+
 }
