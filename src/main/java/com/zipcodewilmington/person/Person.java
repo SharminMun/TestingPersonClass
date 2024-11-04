@@ -11,14 +11,6 @@ class Person {
     private String birthMonth;
     private String nationality;
 
-//        String expectedName = "Tania";
-//        int expectedAge = 30;
-//
-//        Person person = new Person("Tania", 30);
-//        String actualName = person.getName();
-//        int actualAge = person.getAge();
-
-
 
     public Person(String name, int age, String lastName, String placeOfBirth, String birthMonth, String nationality) {
         this.name = name;
@@ -42,6 +34,10 @@ class Person {
         this.age = age;
     }
 
+    public Person() {
+
+    }
+
     public void setName(String name) {
         this.name = name;
     }
@@ -62,7 +58,17 @@ class Person {
         return lastName;
     }
 
+    public String setLastName() {
+        this.lastName = lastName;
+        return lastName;
+    }
+
     public String getPlaceOfBirth() {
+        return placeOfBirth;
+    }
+
+    public String setPlaceOfBirth() {
+        this.placeOfBirth = placeOfBirth;
         return placeOfBirth;
     }
 
@@ -70,9 +76,18 @@ class Person {
         return birthMonth;
     }
 
-    public  String getNationality() {
+    public String setBirthMonth() {
+        this.birthMonth = birthMonth;
+        return birthMonth;
+    }
+
+    public String getNationality() {
         return nationality;
     }
+
+    public String setNationality() {
+        this.nationality = nationality;
+        return nationality;
+    }
+
 }
-
-
